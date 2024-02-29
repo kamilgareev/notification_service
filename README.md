@@ -46,14 +46,13 @@ EMAIL_HOST_USER = '...'
 EMAIL_HOST_PASSWORD = '...'
 EMAIL_PORT = ...
 STATISTICS_RECIPIENTS = '...'
-
 ````
 - Создание и применение миграций
 ```
 python manage.py makemigrations
 python manage.py migrate
 ```
-- Запуск сервера RabbitMQ из встроенной командной строки 
+- Запуск сервера RabbitMQ из встроенной командной строки
 ```
 rabbitmq-server start
 ```
@@ -64,7 +63,6 @@ celery -A notification_service worker -l info --pool=solo
 - Запуск Flower
 ```
 celery -A notification_service flower --loglevel=info
-
 ```
 ## URL проекта
 - ### Flower
@@ -99,12 +97,3 @@ http://127.0.0.1:5555/
     ```
     http://127.0.0.1:8000/distributions/{id}
     ```
-## Дополнительные задания:
-
-- Документация (пункт 5)
-- Администраторский UI (пункт 6)
-- Сервис для отправки статистики на почту (пункт 8)
-- Обработка ошибок и повторные запросы (пункт 9)
-
-
-
